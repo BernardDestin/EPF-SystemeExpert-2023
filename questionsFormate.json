@@ -1,0 +1,166 @@
+{
+    "question-no-0" : {
+        "visible" : true,
+        "conditions": [
+        ],
+        "type" : "yes-or-no-p",
+        "question": "Did you hit, injure or fall on your upper arm or shoulder recently?",
+        "then": [
+            {"assertType": "condition","condition": "Did you hit, injure or fall on your upper arm or shoulder recently?","value": "yes"}
+        ],
+        "else": [
+            {"assertType": "diagnosis", "assertation": "You are fine"},
+            {"assertType": "self-care", "assertation": "Don't drink water!"}
+        ]
+    },
+    "question-no-1" : {
+        "visible" : true,
+        "conditions": [
+            {"condition": "Did you hit, injure or fall on your upper arm or shoulder recently?","value": "yes"}
+        ],
+        "type" : "yes-or-no-p",
+        "question": "Did you feel your shoulder pop out of place and/or pop back into place?",
+        "then": [
+            {"assertType": "diagnosis", "assertation": "Your SHOULDER may be or may have been DISLOCATED."},
+            {"assertType": "self-care", "assertation": "See your doctor right away."}
+        ],
+        "else": [
+            {"assertType": "condition","condition": "Did you feel your shoulder pop out of place and/or pop back into place?","value": "no"}
+        ]
+    },
+    "question-no-2": {
+        "visible": true,
+        "conditions": [
+            {"condition": "Did you feel your shoulder pop out of place and/or pop back into place?","value": "no"}
+        ],
+        "type": "yes-or-no-p",
+        "question": "Is your upper arm swollen or misshaped?",
+        "then": [
+            {"assertType": "diagnosis","assertation": "Your HUMERUS (upper arm bone) may be FRACTURED."},
+            {"assertType": "self-care","assertation": "EMERGENCY Call your doctor or go to the emergency room right away."}
+        ],
+        "else": [
+            {"assertType": "condition","condition": "Is your upper arm swollen or misshaped?","value": "no"}
+        ]
+    },
+    "question-no-3": {
+        "visible": true,
+        "conditions": [
+            {"condition": "Is your upper arm swollen or misshaped?","value": "no"}
+        ],
+        "type": "yes-or-no-p",
+        "question": "Is your collarbone tender, or do you have a bump on it?",
+        "then": [
+            {"assertType": "diagnosis","assertation": "Your CLAVICLE (collarbone) may be FRACTURED."},
+            {"assertType": "self-care","assertation": "Call your doctor right away. Use a sling to restrict movement of your arm and use an analgesic, such as acetaminophen or ibuprofen, to relieve pain until you see your doctor."}
+        ],
+        "else": [
+            {"assertType": "condition","condition": "Is your collarbone tender, or do you have a bump on it?","value": "no"}
+        ]
+    },
+    "question-no-4": {
+        "visible": true,
+        "conditions": [
+            {"condition": "Is your collarbone tender, or do you have a bump on it?","value": "no"}
+        ],
+        "type": "yes-or-no-p",
+        "question": "Is there tenderness or pain near the shoulder-end of your collarbone, and does lifting your arm with your uninjured arm help the pain?",
+        "then": [
+            {"assertType": "diagnosis","assertation": "Your SHOULDER may be SEPARATED."},
+            {"assertType": "self-care","assertation": "Call your doctor right away. Use a sling to restrict movement of your arm and use an analgesic, such as acetaminophen or ibuprofen, to relieve pain until you see your doctor."}
+        ],
+        "else": [
+            {"assertType": "condition","condition": "Is there tenderness or pain near the shoulder-end of your collarbone, and does lifting your arm with your uninjured arm help the pain?","value": "no"}
+        ]
+    },
+    "question-no-5": {
+        "visible": true,
+        "conditions": [
+            {"condition": "Is there tenderness or pain near the shoulder-end of your collarbone, and does lifting your arm with your uninjured arm help the pain?","value": "no"}
+        ],
+        "type": "yes-or-no-p",
+        "question": "Does pain come with a twisting motion of your arm, or does a throwing motion cause pain, and does your shoulder seem weak?",
+        "then": [
+            {"assertType": "diagnosis","assertation": "You may have a TORN ROTATOR CUFF or SHOULDER INSTABILITY"},
+            {"assertType": "self-care","assertation": "See your doctor."}
+        ],
+        "else": [
+            {"assertType": "condition","condition": "Does pain come with a twisting motion of your arm, or does a throwing motion cause pain, and does your shoulder seem weak?","value": "no"}
+        ]
+    },
+    "question-no-6": {
+        "visible": true,
+        "conditions": [
+            {"condition": "Does pain come with a twisting motion of your arm, or does a throwing motion cause pain, and does your shoulder seem weak?","value": "no"}
+        ],
+        "type": "yes-or-no-p",
+        "question": "Do you have redness or swelling around your shoulder?",
+        "then": [
+            {"assertType": "diagnosis","assertation": "You may have INFLAMMATION in or around a joint, also called BURSITIS, or a serious INFECTION of the bone, the joint, or the skin."},
+            {"assertType": "self-care","assertation": "URGENT See your doctor right away."}
+        ],
+        "else": [
+            {"assertType": "condition","condition": "Do you have redness or swelling around your shoulder?","value": "no"}
+        ]
+    },
+    "question-no-7": {
+        "visible": true,
+        "conditions": [
+            {"type": "not","condition": "Do you have redness or swelling around your shoulder?","value": "no"}
+        ],
+        "type": "yes-or-no-p",
+        "question": "Within the last month have you had a sore throat or a skin ?",
+        "then": [
+            {"assertType": "diagnosis","assertation": "These symptoms may be from RHEUMATIC FEVER, a reaction to a"},
+            {"assertType": "self-care","assertation": "URGENT See your doctor right away."}
+        ],
+        "else": [
+            {"assertType": "condition","condition": "Within the last month have you had a sore throat or a skin ?","value": "no"}
+        ]
+    },
+    "question-no-8": {
+        "visible": true,
+        "conditions": [
+            {"condition": "Within the last month have you had a sore throat or a skin ?","value": "no"}
+        ],
+        "type": "yes-or-no-p",
+        "question": "Do you have redness and swelling in more than one joint, including your shoulder?",
+        "then": [
+            {"assertType": "diagnosis","assertation": "You may have RHEUMATOID ARTHRITIS, a disease affecting the immune system, or GOUT, an inflammation of the shoulder joint."},
+            {"assertType": "self-care","assertation": "See your doctor. Apply heat to the affected area and take an anti-inflammatory medicine, such as ibuprofen, for pain."}
+        ],
+        "else": [
+            {"assertType": "condition","condition": "Do you have redness and swelling in more than one joint, including your shoulder?","value": "no"}
+        ]
+    },
+    "question-no-9": {
+        "visible": true,
+        "conditions": [
+            {"condition": "Do you have redness and swelling in more than one joint, including your shoulder?","value": "no"}
+        ],
+        "type": "yes-or-no-p",
+        "question": "Do you feel pain when you move your shoulder but there's no swelling or redness?",
+        "then": [
+            {"assertType": "diagnosis","assertation": "You may have BURSITIS or ROTATOR CUFF SYNDROME"},
+            {"assertType": "self-care","assertation": "Use an anti-inflammatory medicine, such as ibuprofen, and apply heat to the affected area. If your symptoms do not improve, see your doctor."}
+        ],
+        "else": [
+            {"assertType": "condition","condition": "Do you feel pain when you move your shoulder but there's no swelling or redness?","value": "no"}
+        ]
+    },
+    "question-no-10": {
+        "visible": true,
+        "conditions": [
+        {"condition": "Do you feel pain when you move your shoulder but there's no swelling or redness?","value": "no"}
+        ],
+        "type": "yes-or-no-p",
+        "question": "Do you have increasing stiffness and inability to move your shoulder ?",
+        "then": [
+        {"assertType": "diagnosis","assertation": "You may have ADHESIVE CAPSULITIS, also called a FROZEN SHOULDER."},
+        {"assertType": "self-care","assertation": "See your doctor. This condition is usually treated with special exercises you can do on your own."}
+        ],
+        "else": [
+        {"assertType": "diagnosis","assertation": "For more information, please talk to your doctor. If you think the problem is serious, call your doctor right away."}
+        ]
+    }
+}
