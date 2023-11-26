@@ -57,7 +57,7 @@ class ExpertSystem:
                         if condition["condition"] == cond["condition"]:
                             if condition["value"] == cond["value"]:
                                 valide = True
-                                break
+                            break
                     if not valide:
                         possible = False
                         break
