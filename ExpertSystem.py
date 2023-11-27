@@ -70,6 +70,7 @@ class ExpertSystem:
                 if self.diagnosis != None:
                     print("Votre diagnostic est : " + self.diagnosis)
                     if self.self_care is not None : print("Conseil : " + self.self_care)
+                    input()
                     return
 
 if __name__ == "__main__":
